@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="author" content="sen"/>
+		<title>问答系统登录页面</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="all.css"/>
+	</head>
+	<body>
+		<!--到航条-->
+		<nav class = "navbar navbar-inverse navbar-fixed-top ">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-title">
+						<span id="goback" class="glyphicon glyphicon-chevron-left pull-left"></span>
+						登录
+						<span id="register" class="glyphicon glyphicon-plus-sign pull-right"></span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--登录表单-->
+		<div class="container">
+			<form action="/user/login" method="post">
+				<div class="form-group">
+					<!--昵称-->
+					<input type="text" class="form-control" name="petname" value="" required pattern="^[a-zA-Z\u4E00-\u9FA5]{2,12}$"  placeholder="请输入账号"/>
+				</div>
+				<!--密码-->
+				<div class="form-group">
+				<input type="password" value="" name="password" class="form-control" required pattern="^.{6,16}" placeholder="请输入密码"/>
+				</div>
+				
+				<!--提交按钮-->
+				<div class="form-group">
+				<input type="submit" value="完成" class="btn btn-success form-control"/>
+				</div>
+			</form>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						只有
+						<button type="button" class="close" data-dismiss="modal" aria-hidden = "true"> </button>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div id="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal"> 确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/login.js" type="text/javascript" charset="utf-8"></script>
